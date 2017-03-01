@@ -1,0 +1,7 @@
+---
+applications:
+- name: NodeJS-BCI01
+  memory: 512M
+  host: NodeJS-BCI01
+  domain: mybluemix.net
+  instances: 1
