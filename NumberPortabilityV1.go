@@ -24,7 +24,7 @@ import (
 	"strings"
 )
 
-// NumberPortabilityChaincode is simple chaincode implementing logging to Blockchain
+// NumberPortabilityChaincode is a Smart Contract between CSPs for porting In or Porting Out Customers and settling the billing across the CSPs
 
 
 type NumberPortabilityChaincode struct {
