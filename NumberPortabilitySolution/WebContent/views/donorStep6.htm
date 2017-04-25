@@ -1,0 +1,100 @@
+
+				<div class="col-sm-* containerdiv" >					
+					<div class="panel panel-info" >			
+						<div class="panel-heading" data-toggle="collapse" data-target="#dataSet1">Approve Or Reject Number Portability Request</div>		
+						<div class="panel-body collapse in" id="UserDetails">
+							<div id="requestList" class="requestList">
+								<p>Following Request are pending for your action.</p>
+								
+								<table class="table-bordered" width="95%">
+									<thead style="background-color: #663d00;font-weight: bold;" class="text-center whitetext">
+										<tr>
+										<td></td>
+										<td>Customer Number</td>
+										<td>Old Provider</td>
+										<td>New Provider</td>
+										<td>Status</td>
+										<td></td>
+										</tr>
+									</thead>
+									<tr class="text-center">
+										<td></td>
+										<td>9831242287</td>
+										<td>Airtel</td>
+										<td>GIO</td>
+										<td>Closed</td>
+									</tr>
+									<tr class="text-center">
+										<td><input type="checkbox" ></td>
+										<td>9231546720</td>
+										<td>Airtel</td>
+										<td>Vodafone</td>
+										<td ng-show="approveResult.id != 1">Porting Out in Progress</td>
+										<td ng-show="approveResult.id == 1">{{approveResult.value}}</td>
+										<td ng-show="approveResult.id == 1"></td> 
+									</tr>
+									<tr class="text-center">
+										<td></td>
+										<td>9231546719</td>
+										<td>Airtel</td>
+										<td>Vodafone</td>
+										<td ng-show="approveResult.id != 2">Active</td>
+										<td ng-show="approveResult.id == 2">{{approveResult.value}}</td>
+										<td ng-show="approveResult.id == 2"></td> 
+										<td ng-hide="approveResult.id == 2"></td> 
+									</tr>
+									<!-- tr class="text-center">
+										<td></td>
+										<td>9231546721</td>
+										<td>Jeo</td>
+										<td>Vodafone</td>
+										<td ng-show="approveResult.id != 3">Retained</td>
+										<td ng-show="approveResult.id == 3">{{approveResult.value}}</td>
+										<td ng-show="approveResult.id == 3"></td> 
+										<td ng-hide="approveResult.id == 3"></td> 
+									</tr>
+									<tr class="text-center">
+										<td><input type="checkbox" ></td>
+										<td>9231546722</td>
+										<td>TATAindicom</td>
+										<td>Vodafone</td>
+										<td ng-show="approveResult.id != 4">Porting Out in Progress</td>
+										<td ng-show="approveResult.id == 4">{{approveResult.value}}</td>
+										<td ng-show="approveResult.id == 4"></td> 
+										
+									</tr>-->
+									<tr class="text-center">
+										<td><input type="checkbox"></td>
+										<td>9231546731</td>
+										<td>Airtel</td>
+										<td>Vodafone</td>
+										<td ng-show="approveResult.id != 5">Porting Out in Progress</td>
+										<td ng-show="approveResult.id == 5">{{approveResult.value}}</td>
+										<td ng-show="approveResult.id == 5"></td> 
+										
+									</tr>
+									<tr class="text-center">
+										<td><input type="checkbox"></td>
+										<td>9231546732</td>
+										<td>Airtel</td>
+										<td>Vodafone</td>
+										<td ng-show="approveResult.id != 6">Porting Out in Progress</td>
+										<td ng-show="approveResult.id == 6">{{approveResult.value}}</td>
+										<td ng-show="approveResult.id == 6"></td> 
+										
+									</tr>
+								</table>
+								<br> <br>			
+						</div>
+						<div align="center">
+						<button type="submit" class="btn btn-success"
+						ng-click="postUsageDetailsRequest()" data-dismiss="modal" >
+						<span class="glyphicon glyphicon-ok"></span>Initiate Retention<button>
+						<!--  <button type="submit" class="btn btn-success" ng-click="postRequest(name,number,provider,ssn,portabilityIndicator)">
+	      						<span class="glyphicon glyphicon-ok"></span> Initiate Request
+	    				 </button>-->
+    				</div>
+					</div>					
+				</div>
+			</div>
+			

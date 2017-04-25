@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+
+AngularJs $http.post() Service Response Example
+
+</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script type="text/javascript">
+
+var app = angular.module('postserviceApp', []);
+
+app.controller('postserviceCtrl', function ($scope, $http) {
+
+$scope.mobNo = null;
+
+$scope.name = null;
+
+$scope.place = null;
+
+$scope.id = null;
+
+$scope.postdata = function (mobNo,name,place,id) {
+
+var data = {
+mobNo:mobNo,
+name: name,
+
+place: place,
+
+id: id
+
+};
+
+var headers=[];//Call the services
+
+$http.get('https://nodejs-bci01.mybluemix.net/add', JSON.stringify(data),headers).then(function (response) {
+
+if (response.data)
+
+$scope.msg = "Post Data Submitted Successfully!";
+
+}, function (response) {
+
+$scope.msg = "Service not Exists";
+
+$scope.statusval = response.status;
+
+$scope.statustext = response.statusText;
+
+$scope.headers = response.headers();
+
+});
+
+};
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div ng-app="postserviceApp" ng-controller="postserviceCtrl">
+
+<div>
+
+Mobile Number : <input ng-model="mobNo" /><br/><br/>
+
+Name : <input ng-model="name" /><br/><br/>
+
+Place : <input ng-model="place" /><br/><br/>
+Id : <input ng-model="id" /><br/><br/>
+
+<input type="button" value="Send" ng-click="postdata(mobNo, name, place,id)" /> <br/><br/>
+
+</div>
+
+<p>Output Message : {{msg}}</p>
+
+<p>StatusCode: {{statusval}}</p>
+
+<p>Status: {{statustext}}</p>
+
+<p>Response Headers: {{headers}}</p>
+
+</div>
+
+</body>
+
+</html>

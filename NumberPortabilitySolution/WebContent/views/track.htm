@@ -1,0 +1,31 @@
+				<div class="col-sm-* containerdiv" >
+					<div class="panel panel-info" >		
+						<div class="panel-heading" data-toggle="collapse" data-target="#dataSet1">Track Request</div>	
+						<div class="panel-body collapse in" id="trackDetails">
+							<div id="requestList" class="requestList">
+								<p>You can track the following requests</p>								
+								<table class="table-bordered" width="95%">
+									<thead style="background-color: #325c80;font-weight: bold;" class="text-center whitetext">
+										<tr>
+										<td>Customer Number</td>
+										<td>Old Provider</td>
+										<td>New Provider</td>
+										<td>Status</td>
+										<td></td>
+										</tr>
+									</thead>
+									<tr ng-show="users" class="text-center" ng-repeat="user in users">
+										<td>{{user.number}}</td>
+										<td>{{user.oldProvider}}</td>
+										<td>{{user.newProvider}}</td>
+										<td>{{user.status}}</td>
+										<td><a href="" ng-click="trackRequest(user.number,user.oldProvider,user.newProvider)" >Track</a></td> 
+									</tr>
+									<tr ng-hide="users">
+										<td colspan=4 align="center">No Record Found</td>										
+									</tr>								
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>

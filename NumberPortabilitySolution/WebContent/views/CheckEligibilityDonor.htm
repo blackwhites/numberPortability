@@ -1,0 +1,42 @@
+
+		<form class="form-horizontal">
+			<div class="panel panel-info">
+				<div class="panel-heading" data-toggle="collapse"
+					data-target="#dataSet1">Check Eligibility</div>
+				<div class="panel-body collapse in" id="dataSet1">
+					<p>Keep your current phone number - It's easy to port your number to our ABC network and become part of nationwide 4G LTE.</p>
+					<hr>
+					<p>To check eligibility, enter your phone number.</p>
+					<p>During this process you will have to provide additional information to establish your identity.</p>
+					<br>
+					<div class="form-group" align="center">
+						<div class="col-xs-3 emptyCol" ></div>					
+						<label class="control-label col-sm-2" for="Usage">Phone Number:</label>
+						<div class="col-sm-2">
+							<div class="input-group">
+								<span class="input-group-addon">
+									<i class="glyphicon glyphicon-phone"></i> 
+								</span> 
+								<input type="text" class="form-control" placeholder="Enter Number"  ng-model="Number">
+							</div>
+						</div>
+					</div>	
+					<br/>
+					<div>
+						<div class="col-xs-4 emptyCol" ></div>	
+						<div class="col-xs-4 emptyCol" >	
+							<div class="col-xs-1 emptyCol" ></div>						
+							<button style="width:150px;" type="submit" class="btn btn-success" ng-click="checkEligibilityDonor(Number,'Airtel','Vodafone')">
+		      					<span class="glyphicon glyphicon-ok"></span>Check Eligibility</button>
+		    				<button style="width:150px;" type="reset" class="btn btn-warning" ng-click="clear()">
+		    				<span class="glyphicon glyphicon-remove"></span>Reset</button>
+	    				</div>
+    				</div>					
+					<br><br><br><br>
+					<p>
+						To check status of your request please visit <a href="#/track">www.track.com</a>.
+					</p>
+				</div>
+			</div>
+
+		</form>

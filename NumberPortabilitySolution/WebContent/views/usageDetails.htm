@@ -1,0 +1,102 @@
+<div class="modal fade">
+  <div class="modal-dialog" style="width:1300px;"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="close({status:false,value:'Pending'})" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">User Details</h4>
+      </div>
+      <div class="modal-body">
+			<div class="panel panel-info">
+				<div class="panel-body collapse in" id="UserDetails">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Usage">Number:</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"> <i
+									class="glyphicon glyphicon-phone"></i>
+								</span> <input type="text" class="form-control"
+									placeholder="Mobile Number" ng-model="number" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Usage">Service Provider:</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"> <i
+									class="glyphicon glyphicon-cog"></i>
+								</span> <input type="text" class="form-control"
+									placeholder="Service Provider" ng-model="provider" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Usage">Service Validity:</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"> <i
+									class="glyphicon glyphicon-signal"></i>
+								</span> <input type="text" class="form-control"
+									placeholder="Service Provider" ng-model="serviceValidity" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Usage">Plan:</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"> <i
+									class="glyphicon glyphicon-book"></i>
+								</span> <input type="text" class="form-control"
+									placeholder="Plan" ng-model="plan" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Usage">Talk Time Balance:</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"> <i
+									class="glyphicon glyphicon-earphone"></i>
+								</span> <input type="text" class="form-control"
+									placeholder="Talk Time Balance" ng-model="talktimeBalance" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Usage">SMS Balance:</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"> <i
+									class="glyphicon glyphicon-envelope"></i>
+								</span> <input type="text" class="form-control"
+									placeholder="SMS Balance" ng-model="smsBalance" disabled>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="Usage">Data Balance:</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"> <i
+									class="glyphicon glyphicon-film"></i>
+								</span> <input type="text" class="form-control"
+									placeholder="Data Balance" ng-model="dataBalance" disabled>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-success"
+					ng-click="postUsageDetailsRequest()" data-dismiss="modal" >
+					<span class="glyphicon glyphicon-ok"></span> Approve
+				</button>
+				<button type="submit" class="btn btn-success"
+					ng-click="rejectRequest()" data-dismiss="modal" >
+					<span class="glyphicon glyphicon-ok"></span> Reject
+				</button>
+			</div> 
+	 </div>
+  </div>
+</div>

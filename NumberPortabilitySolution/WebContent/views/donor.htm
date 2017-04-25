@@ -1,0 +1,37 @@
+
+				<div class="col-sm-* containerdiv" >					
+					<div class="panel panel-info" >			
+						<div class="panel-heading" data-toggle="collapse" data-target="#dataSet1">Approve Or Reject Number Portability Request</div>		
+						<div class="panel-body collapse in" id="UserDetails">
+							<div id="requestList" class="requestList">
+								<p>Following Request are pending for your action.</p>
+								
+								<table class="table-bordered" width="95%">
+									<thead style="background-color: #663d00;font-weight: bold;" class="text-center whitetext">
+										<tr>
+										<td>Customer Number</td>
+										<td>Old Provider</td>
+										<td>New Provider</td>
+										<td>Status</td>
+										<td></td>
+										</tr>
+									</thead>
+									<tr ng-show="users" class="text-center" ng-repeat="user in users">
+										<td>{{user.number}}</td>
+										<td>{{user.oldProvider}}</td>
+										<td>{{user.newProvider}}</td>
+										<td ng-show="approveResult.id != $index+1">InitiationConfirmed</td>
+										<td ng-show="approveResult.id == $index+1">{{approveResult.value}}</td>
+										<td ng-show="approveResult.id == $index+1"></td> 
+										<td ng-hide="approveResult.id == $index+1" ><a href="" ng-click="showApproveReject($index+1,user.number,user.oldProvider,user.newProvider)" >Open</a></td>
+									</tr>
+									<tr ng-hide="users">
+										<td colspan=4 align="center">No Record Found</td>										
+									</tr>										
+								</table>
+								<br> <br>			
+						</div>
+					</div>					
+				</div>
+			</div>
+			

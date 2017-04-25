@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NumberPortabilityApp" >
+<head>
+<title>Number Portability</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<link rel="stylesheet" ng-href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+<link rel="stylesheet" ng-href="{{$root.csshref}}">		
+<link rel="stylesheet" href="{{$root.blockcsshref}}">
+		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+<script src="js/shared/angular-modal-service.js"></script>
+<script src="js/shared/angular-modal-service.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/NumberPortabilityConfirmRequestController.js"></script>
+<script src="js/controllers/NumberPortabilityCheckEligibilityController.js"></script>
+<script src="js/controllers/NumberPortabilityRequestController.js"></script>
+<script src="js/controllers/NumberPortabilityRegulatorViewController.js"></script>
+<script src="js/controllers/NumberPortabilityDonorController.js"></script>
+<script src="js/controllers/NumberPortabilityUsageDetailsController.js"></script>
+<script src="js/controllers/NumberPortabilityRequlatorController.js"></script>
+<script src="js/controllers/NumberPortabilityTrackController.js"></script>
+<script src="js/controllers/NumberPortabilityConfirmController.js"></script>
+<script src="js/controllers/NumberPortabilityRequestSuccessController.js"></script>
+<script src="js/services/NumberPortabilityService.js"></script>
+</head>
+<body>
+	<div class="container-fluid" ng-style="{'background-color': $root.pageColor}" style="height:610px">
+		
+		<div class="row">
+			<div class="col-sm-* header" ng-style="{'background-color': $root.bgColor}">
+				<h1 class="text-center whitetext">
+					<img ng-src="./images/{{$root.logo}}" alt="ibm logo" class="logo_image hidden-xs" align="left"> Number	Portability Solution
+				</h1>
+			</div>
+		</div>
+		<form class="form-horizontal">
+			<div class="row">
+				<div ng-view></div>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>

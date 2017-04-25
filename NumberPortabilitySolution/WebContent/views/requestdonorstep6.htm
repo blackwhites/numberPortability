@@ -1,0 +1,145 @@
+
+				<div class="col-sm-* containerdiv">
+					<!-- <h3>
+						Number Portability Request
+					</h3>-->
+					<div class="panel panel-info" >	
+						<div class="panel-heading" data-toggle="collapse" data-target="#dataSet1">User Details</div>					
+						<div class="panel-body collapse in" id="dataSet1">
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Services">Name:</label>
+							<div class="col-sm-10">
+								<div class="input-group" style="width:800px;">
+									<span class="input-group-addon">
+										<i	class="glyphicon glyphicon-user"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i> 
+									</span> 
+									<input id="Name" type="text" class="form-control" placeholder="Name" ng-model="name" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Usage">Number:</label>
+							<div class="col-sm-10">
+								<div class="input-group" style="width:800px;">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-phone"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i>
+									</span> 
+									<input type="text" class="form-control" placeholder="Number"  ng-model="number" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Balance">Service Provider:</label>
+							<div class="col-sm-10">
+								<div class="input-group" style="width:800px;">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i></span> 
+									<input id="provider" type="text" class="form-control" placeholder="Service Provider"  ng-model="provider" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Balance">Email Address:</label>
+							<div class="col-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i> </span> 
+									<input id="ssn" type="text" class="form-control" placeholder="Email Address"  ng-model="ssn" disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Balance">Portability Indicator:</label>
+							<div class="col-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i> </span>
+									<input id="ssn" type="text" class="form-control" placeholder="Portability Indicator" ng-model="portabilityIndicator" disabled>								
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="control-label col-sm-2" for="Usage">UPC Requested:</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<span class="input-group-addon"> <i
+									class="glyphicon glyphicon-picture"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i>
+								</span> <input type="text" class="form-control"
+									placeholder="Data Balance" value="true" disabled>
+							</div>
+						</div>
+					</div>
+						</div>
+					</div>
+					<div class="panel panel-info">
+						<div class="panel-heading" data-toggle="collapse" data-target="#dataSet1">User Plan & Usage Details</div>
+						<div class="panel-body collapse in" id="dataSet1">						
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Usage">Plan:</label>
+							<div class="col-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i
+										class="glyphicon glyphicon-book"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i> </span> <input type="text"
+										class="form-control" ng-model="oldData.plan" placeholder="Plan"  disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Balance">Service Validity:</label>
+							<div class="col-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-signal"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i></span> <input ng-model="oldData.serviceVal"
+										type="text" class="form-control"
+										placeholder="Service Validity"  disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Balance">TalkTime Balance:</label>
+							<div class="col-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i></span> <input ng-model="oldData.ttBal"
+										type="text" class="form-control"
+										placeholder="TalkTime Balance"  disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Balance">SMS Balance:</label>
+							<div class="col-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i></span> <input ng-model="oldData.smsBal"
+										type="text" class="form-control"
+										placeholder="SMS Balance"  disabled>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-2" for="Balance">Data Balance:</label>
+							<div class="col-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-film"></i><i
+										class="glyphicon glyphicon-bitcoin" style="font-size:10px"></i></span> <input ng-model="oldData.dataBal"
+										type="text" class="form-control"
+										placeholder="Data Balance"  disabled>
+								</div>
+							</div>
+						</div>
+						</div>
+					</div>					
+					<div align="center">
+						<button type="submit" class="btn btn-success"
+						ng-click="postUsageDetailsRequest()" data-dismiss="modal" >
+						<span class="glyphicon glyphicon-ok"></span>Generate And Send UPC<button>
+						<!--  <button type="submit" class="btn btn-success" ng-click="postRequest(name,number,provider,ssn,portabilityIndicator)">
+	      						<span class="glyphicon glyphicon-ok"></span> Initiate Request
+	    				 </button>-->
+    				</div>
+				</div>

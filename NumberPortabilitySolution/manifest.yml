@@ -1,0 +1,6 @@
+---
+applications:
+- name: NumberPortabilitySolution
+  memory: 256M
+  host: NumberPortabilitySolution
+  domain: mybluemix.net

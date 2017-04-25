@@ -1,0 +1,28 @@
+
+				<div class="col-sm-* containerdiv">
+					<h3>
+						Number Portability Request
+					</h3>
+					<div class="panel panel-info" >						
+						<div class="panel-body collapse in" id="dataSet1">						
+							<div class="form-group">
+								<label class="control-label col-sm-2" for="Usage">Number:</label>
+								<div class="col-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon">
+											<i class="glyphicon glyphicon-phone"></i> 
+										</span> 
+										<input type="text" class="form-control" placeholder="Enter Number"  ng-model="number">
+									</div>
+								</div>
+							</div>						
+						</div>
+					</div>
+					<div align="center">
+						 <button type="submit" class="btn btn-success" ng-click="checkEligibility(number)">
+	      						<span class="glyphicon glyphicon-ok"></span> Check Eligibility
+	    				 </button>
+	    				<button type="reset" class="btn btn-warning" ng-click="clear()">
+	    				<span class="glyphicon glyphicon-remove"></span>Reset</button>
+    				</div>
+				</div>
