@@ -63,7 +63,7 @@
 			    },
 			    "ctorMsg": {
 			      "function": "UsageDetailsFromDonorCSP",
-			      "args": ["mobNo", "serviceProvider", "plan", "serviceValidity", "talktimeBalance", "smsBalance","dataBalance"]
+			      "args": ["mobNo", "serviceProviderOld", "serviceProviderNew", "plan", "serviceValidity", "talktimeBalance", "smsBalance","dataBalance"]
 			    },
 			    "secureContext": "userType"
 			  },
@@ -176,11 +176,32 @@
 			"jsonrpc": "2.0",
 			"result": {
 				"status":"OK",
-				"message": "{mobNo serviceProvider customerName ssnNumber portabilityIndicator}"				
+				"message": {"Number":"mobNo", "ServiceProvider":"serviceProvider", "CustomerName":"customerName", "SSNNumber":"ssnNumber", "PortabilityIndicator":"portabilityIndicator"}				
 			  },
 			  "id": 1	
-	  }	    
+	  }	,
 	  
+	  "query_EligibilityConfirmQuery_requestData" : {		
+			"jsonrpc": "2.0",
+			"method": "query",
+			"params": {
+				"type": 1,
+				"chaincodeID": {
+					"name": "chainID"
+				},
+				"ctorMsg": {
+					"function": "EligibilityConfirmQuery",
+			      "args": ["mobNo"]
+			    },
+			    "secureContext": "userType"
+			  },
+			  "id": 1	
+	  },
+	  
+	  "query_cloudant_with_status" : {
+	  		"selector" : { "status": "status_value"},
+			"fields" : [ "_id",  "serviceProviderNew","serviceProvider"]
+		}
 	  
 	    
 
